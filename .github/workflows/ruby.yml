@@ -31,4 +31,4 @@ jobs:
 
       # Step 4: Run RSpec tests
       - name: Run RSpec
-        run: bundle exec rspec
+        run: rspec
