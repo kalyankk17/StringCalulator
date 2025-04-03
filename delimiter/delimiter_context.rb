@@ -10,11 +10,9 @@ module Delimiter
     end
 
     def parse(numbers)
-      # First, try the custom strategy
       if numbers.start_with?("//")
         @custom_strategy.parse(numbers)
       else
-        # Fallback to the default strategy
         @default_strategy.parse(numbers)
       end
     end

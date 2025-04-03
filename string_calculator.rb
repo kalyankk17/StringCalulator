@@ -3,6 +3,8 @@ require_relative 'delimiter/delimiter_context'
 
 # String Calculator Class
 class StringCalculator
+
+  MAX_CAPPING = 1000
   def initialize
     @delimiter = Delimiter::DelimiterContext.new
   end
@@ -18,9 +20,9 @@ class StringCalculator
       next if token.strip.empty?
 
       num = token.to_i
-      if num < 0
+      if num.negative?
         negatives << num
-      elsif num <= 1000
+      elsif num <= MAX_CAPPING
         result += num
       end
     end

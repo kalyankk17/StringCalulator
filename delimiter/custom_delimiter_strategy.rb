@@ -3,19 +3,14 @@ require_relative 'delimiter_strategy'
 
 module Delimiter
   # Custom Delimiter Strategy
-  # Custom Delimiter Strategy with Stack
   class CustomDelimiterStrategy < DelimiterStrategy
     def parse(numbers)
-      # Extract the delimiter section and numbers section
       delimiter_section, numbers_section = extract_delimiters_and_numbers(numbers)
 
-      # Parse delimiters and push them onto a stack
       stack = parse_delimiters_to_stack(delimiter_section)
 
-      # Add default delimiters (`,` and `\n`) to the stack
       stack.push(",", "\n")
 
-      # Split the numbers using the stack of delimiters
       split_numbers_with_stack(numbers_section, stack)
     end
 
