@@ -25,9 +25,9 @@ jobs:
           ruby-version: 3.2.2 # Specify your Ruby version
           bundler-cache: true # Cache gems to speed up builds
 
-      # Step 3: Install dependencies
-      - name: Install dependencies
-        run: bundle install
+      # Step 3: Install RSpec directly
+      - name: Install RSpec
+        run: gem install rspec
 
       # Step 4: Run RSpec tests
       - name: Run RSpec
