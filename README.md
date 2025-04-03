@@ -37,10 +37,3 @@ The **String Calculator** is a programming exercise designed to practice **Test-
     - Example: `"//[***][%%%]\n1***2%%%3"` returns `6`.
 
 ---
-
-## Installation
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/<your-username>/string-calculator.git
-   cd string-calculator
